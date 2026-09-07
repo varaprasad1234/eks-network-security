@@ -1,0 +1,11 @@
+apiVersion: vpcresources.k8s.aws/v1beta1
+kind: SecurityGroupPolicy
+metadata:
+  name: ps-security-group-policy
+spec:
+  serviceAccountSelector: 
+    matchLabels: 
+      app: nginx
+  securityGroups:
+    groupIds: 
+      - REPLACE-WITH-YOUR-SG-ID
